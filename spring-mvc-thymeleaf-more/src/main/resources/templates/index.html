@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+
+    <h2 th:if="${a} > ${b}" th:text="${a} + ' jest większe od ' + ${b}"></h2>
+    <p th:unless="${firstName.length()} > 5" th:text="${firstName}"></p>
+    
+	<div th:switch="${firstName}">
+	    <p th:case="Maciek">Maciek</p>
+	    <p th:case="${exampleName}" th:text="${exampleName}"></p>
+	    <p th:case="*">Nieznajomy</p>
+	</div>
+	
+	<ul>
+	   <li th:each="name: ${names}" th:text="${name}"></li>
+	</ul>
+	
+<form th:action="@{/save}" th:object="${person}">
+   <input type="text" th:field="*{name}" />
+   <input type="number" th:field="*{age}" />
+   <input type="submit" value="Save" />
+</form>
+</body>
+</html>

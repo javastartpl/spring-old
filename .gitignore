@@ -1,0 +1,7 @@
+.metadata/
+.recommenders/
+**/target/
+**/.settings/
+**/.project
+**/.classpath
+**/.tern-project
