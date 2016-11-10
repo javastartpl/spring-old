@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>If / Unless Example</title>
+</head>
+<body>
+    <h2>Is text.length() > 5 ?</h2>
+    <h3 th:if="${text.length()} > 5">Yes</h3>
+    <h3 th:unless="${text.length()} > 5">No</h3>
+    <p th:if="${text.length()} > 5" th:text="${text}">Some sample text</p>
+    
+    <h2 th:text="'Is ' + ${a} + '>' + ${b} + ' ?'">Is a>b ?</h2>
+    <h3 th:text="${a} > ${b}">True / False</h3>
+</body>
+</html>

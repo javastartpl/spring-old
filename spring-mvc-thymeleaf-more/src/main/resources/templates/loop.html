@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>th:each Example</title>
+</head>
+<body>
+    <h1>All Books:</h1>
+    <h2>List</h2>
+    <ul th:remove="all-but-first">
+        <li th:each="book: ${books}" th:text="|${book.author} - ${book.title} (${book.price})|">Book 1</li>
+        <li>Book 2</li>
+        <li>Book 3</li>
+        <li>Book 4</li>
+        <li>Book 5</li>
+    </ul>
+    
+    <h2>Table</h2>
+    <table border="1">
+        <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Price</th>
+        </tr>
+        <tr th:each="book: ${books}" th:object="${book}">
+            <td th:text="*{title}">Author1</td>
+            <td th:text="*{author}">Title1</td>
+            <td th:text="*{price}">1234</td>
+        </tr>
+        <tr th:remove="all">
+            <td>Author2</td>
+            <td>Title2</td>
+            <td>1234</td>
+        </tr>
+    </table>
+</body>
+</html>
