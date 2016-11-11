@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Time tracker</title>
+</head>
+<body>
+    <h1>Time registration</h1>
+    <form action="#" method="post" th:action="@{/save}" th:object="${timeData}">
+        <p>First name: <input type="text" th:field="*{firstName}" /></p>
+        <p>Last name: <input type="text" th:field="*{lastName}" /></p>
+        <p>Time</p>
+        <p>
+	        H: <input type="number"  name="hours" min="0" />
+	        Min: <input type="number" name="minutes" min="0" max="59" />
+	        Sec: <input type="number" name="seconds" min="0" max="59" />
+	    </p>
+	    <input type="submit" value="Save" />
+    </form>
+    <a th:href="@{/show}">Show all times</a>
+</body>
+</html>

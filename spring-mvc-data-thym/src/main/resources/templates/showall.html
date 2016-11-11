@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>All results</title>
+</head>
+<body>
+    <div th:if="not ${allTimes.isEmpty()}">
+        <h1>All registered times:</h1>
+        <table border="1">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Time</th>
+            </tr>
+            <tr th:each="singleTime: ${allTimes}" th:object="${singleTime}">
+                <td th:text="*{firstName}">John</td>
+                <td th:tetx="*{lastName}">Kowalski</td>
+                <td th:text="|*{hours}:*{minutes}:*{seconds}|">1:40:23</td>
+            </tr>
+        </table>
+    </div>
+    <div th:if="${allTimes.isEmpty()}">
+        <h1>There is no data yet :(</h1>
+    </div>
+</body>
+</html>
