@@ -1,17 +1,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-http://maven.apache.org/xsd/maven-4.0.0.xsd">
+http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>pl.javastart</groupId>
-	<artifactId>spring-data</artifactId>
+	<artifactId>spring-data-rest</artifactId>
+	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
+	<name>spring-data-rest Maven Webapp</name>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<spring.version>4.3.0.RELEASE</spring.version>
-		<spring-data.version>1.10.2.RELEASE</spring-data.version>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+		<servlet.version>3.1.0</servlet.version>
+		<!-- spring -->
+		<spring.orm.version>4.3.3.RELEASE</spring.orm.version>
+		<spring.data.version>1.10.5.RELEASE</spring.data.version>
+		<spring.data-rest.version>2.5.5.RELEASE</spring.data-rest.version>
+		<!-- hibernate and database -->
 		<hibernate.version>5.2.0.Final</hibernate.version>
 		<mysql.connector.version>5.1.39</mysql.connector.version>
 		<dbcp.version>2.1.1</dbcp.version>
@@ -21,12 +28,17 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>${spring.version}</version>
+			<version>${spring.orm.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-rest-webmvc</artifactId>
+			<version>${spring.data-rest.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
-			<version>${spring-data.version}</version>
+			<version>${spring.data.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -42,6 +54,12 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-dbcp2</artifactId>
 			<version>${dbcp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 </project>
