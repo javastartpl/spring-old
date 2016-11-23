@@ -1,5 +1,7 @@
 package pl.javastart;
 
+import javax.validation.Validator;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -34,8 +36,7 @@ public class SpringValidatorApp {
     }
     
     @Bean
-    public LocalValidatorFactoryBean validator() {
+    public Validator validator() {
         return new LocalValidatorFactoryBean();
     }
-
 }

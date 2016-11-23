@@ -27,9 +27,7 @@ public class PersonService {
     public void addPerson(Person person) {
         Set<ConstraintViolation<Person>> errors = validator.validate(person);
         if(!errors.isEmpty()) {
-            for(ConstraintViolation<Person> cv: errors) {
-                System.err.println(cv.getMessage());
-            }
+            errors.forEach(err -> System.err.println(err.getMessage()));
         } else {
             people.add(person);
         }
