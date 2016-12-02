@@ -3,10 +3,8 @@ package pl.javastart.dao;
 import java.lang.reflect.ParameterizedType;
 
 import javax.persistence.*;
-import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-@Repository
 @Transactional
 public abstract class GenericDao<T, K> {
 
