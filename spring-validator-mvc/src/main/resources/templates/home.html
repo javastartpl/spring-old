@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Person Validator</title>
+</head>
+<body>
+    <h1>Person Validator</h1>
+    <p th:if="validationMessage" th:text="${validationMessage}">Default validation message</p>
+    
+	<form action="#" method="post" th:action="@{/}" th:object="${person}">
+	    <p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First name errors</p>
+	    <input type="text" th:field="*{firstName}" placeholder="First Name" />
+	        <br />
+	    <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Last name errors</p>
+	    <input type="text" th:field="*{lastName}" placeholder="Last Name" />
+	        <br />
+	    <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email errors</p>
+	    <input type="email" th:field="*{email}" placeholder="Email" />
+	        <br />
+	    <p th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age errors</p>
+	    <input type="number" th:field="*{age}" placeholder="Age" />
+	        <br />
+	    <input type="submit" value="Validate" />
+	</form>
+	
+	<h3 th:if="${#fields.hasErrors('${person.firstName}')}">Errors:</h3>
+	<p th:errors="${person.firstName}">Example error</p>
+</body>
+</html>
