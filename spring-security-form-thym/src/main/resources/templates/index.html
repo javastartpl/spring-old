@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+    <title>Super secure app</title>
+</head>
+<body>
+    <h1>Hello in super secure app</h1>
+    <a href="secret">Go to secured area</a><br />
+    <form action="logmeout" th:action="@{/logmeout}" method="post" >
+        <input type="submit" value="Log me out" />
+    </form>
+</body>
+</html>
