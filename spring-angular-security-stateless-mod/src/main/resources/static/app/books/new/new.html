@@ -1,0 +1,13 @@
+<div ng-show="authenticated">
+	<h1>Add new book:</h1>
+	<form>
+		<input type = "text" placeholder="Title" ng-model="newCtrl.book.title"><br />
+		<input type = "text" placeholder="Author" ng-model="newCtrl.book.author"><br />
+		<input type = "text" placeholder="ISBN" ng-model="newCtrl.book.isbn"><br />
+		<button ng-click="newCtrl.saveBook()">Add book</button>
+	</form>
+</div>
+<div ng-show="!authenticated"> 
+	<h2>Please login to add new books</h2>
+	<a href="#!login">Login</a>
+</div>

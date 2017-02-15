@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<a href="#!list">Homepage </a>
+	<a href="#!new">Add New Book </a>
+	<a href="#!login" ng-show="authenticated">Logout </a>
+	
+	<div ng-view></div>
+	
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/config.js"></script>
+	<script type="text/javascript" src="app/books/common/bookServices.js"></script>
+	<script type="text/javascript" src="app/books/list/listController.js"></script>
+	<script type="text/javascript" src="app/books/details/detailsController.js"></script>
+	<script type="text/javascript" src="app/books/new/newController.js"></script>
+	<script type="text/javascript" src="app/auth/authenticationServices.js"></script>
+	<script type="text/javascript" src="app/auth/authenticationController.js"></script>
+</body>
+</html>
