@@ -11,9 +11,9 @@
         <p>Last name: <input type="text" th:field="*{lastName}" /></p>
         <p>Time</p>
         <p>
-	        H: <input type="number"  name="hours" min="0" />
-	        Min: <input type="number" name="minutes" min="0" max="59" />
-	        Sec: <input type="number" name="seconds" min="0" max="59" />
+	        H: <input type="number"  th:field="*{hours}" min="0" />
+	        Min: <input type="number" th:field="*{minutes}" min="0" max="59" />
+	        Sec: <input type="number" th:field="*{seconds}" min="0" max="59" />
 	    </p>
 	    <input type="submit" value="Save" />
     </form>
