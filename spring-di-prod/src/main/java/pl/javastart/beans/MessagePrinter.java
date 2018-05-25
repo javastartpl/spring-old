@@ -9,7 +9,7 @@ import pl.javastart.beans.Message.MessageType;
 public class MessagePrinter {
 	
 	@Autowired
-	@Message(type = MessageType.SIMPLE)
+	@Message(type = MessageType.FILE)
 	private MessageProducer producer;
 	
 	public void print() {
