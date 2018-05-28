@@ -1,36 +1,29 @@
 package pl.javastart.service.aspects;
 
-import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
-
-import pl.javastart.model.Book;
 
 @Aspect
 @Component
 public class LoggerAspect {
-
-    @Before("execution(public void add(..)) && args(book)")
-    public void logInfo(JoinPoint joinPoint, Book book) {
-        System.out.println("Log before " + joinPoint.getSignature() + book);
+    
+    @Before("execution(* pl.javastart.service.BookRepository.*(..))")
+    public void logInfoBefore() {
+        System.out.println("Log before ");
     }
     
-    @After("execution(public void add(..))")
-    public void logInfo(JoinPoint joinPoint) {
-        System.out.println("Log before " + joinPoint.getSignature());
+    @After("execution(* pl.javastart.service.BookRepository.*(..))")
+    public void logInfoAfter() {
+        System.out.println("Method executed ");
     }
     
-    @AfterThrowing("execution(public void add(..))")
-    public void logError(JoinPoint joinPoint) {
-        System.out.println("Log before " + joinPoint.getSignature());
+    @AfterThrowing("execution(* pl.javastart.service.BookRepository.*(..))")
+    public void logError() {
+        System.out.println("Method finished with error ");
     }
     
-    @AfterReturning("execution(public void add(..))")
-    public void logSuccess(JoinPoint joinPoint) {
-        System.out.println("Log before " + joinPoint.getSignature());
+    @AfterReturning("execution(* pl.javastart.service.BookRepository.*(..))")
+    public void logSuccess() {
+        System.out.println("Method successfully returned");
     }
 }
