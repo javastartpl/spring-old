@@ -6,7 +6,6 @@ import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.*;
 import org.springframework.orm.jpa.*;
 import org.springframework.orm.jpa.vendor.*;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 public class JpaConfig {

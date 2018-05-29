@@ -16,7 +16,7 @@ public class SpringJpaApplication {
         Book book = new Book("1234567890468", "Spring is so cool", "Javastart");
         bookDao.save(book);
         //odczytujemy
-        Book bookGet = bookDao.get(10L);
+        Book bookGet = bookDao.get(1L);
         System.out.println(bookGet);
         
         Thread.sleep(5000);
