@@ -17,9 +17,7 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public void save(Book book) {
-        System.out.println("before");
         entityManager.persist(book);
-        System.out.println("after");
     }
 
     @Override

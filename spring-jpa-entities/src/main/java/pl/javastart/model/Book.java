@@ -11,11 +11,11 @@ import javax.persistence.Transient;
 public class Book implements Serializable {
     private static final long serialVersionUID = 1L;
     
-//    @Id
-//    @GeneratedValue
+    @Id
+    @GeneratedValue
     private Long id;
     private String isbn;
-//    @Transient
+    @Transient
     private String title;
     private String author;
     
@@ -27,8 +27,8 @@ public class Book implements Serializable {
         this.author = author;
     }
 
-    @Id
-    @GeneratedValue
+//    @Id
+//    @GeneratedValue
     public Long getId() {
         System.out.println(">>>>>>>Get Id " + id);
         return id;
@@ -45,7 +45,7 @@ public class Book implements Serializable {
         this.isbn = isbn;
     }
 
-    @Transient
+//    @Transient
     public String getTitle() {
         return title;
     }
