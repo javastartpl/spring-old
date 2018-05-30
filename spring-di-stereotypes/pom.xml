@@ -6,9 +6,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<spring-framework.version>4.2.5.RELEASE</spring-framework.version>
+		<maven.compiler.source>10</maven.compiler.source>
+		<maven.compiler.target>10</maven.compiler.target>
+		<spring-framework.version>5.0.6.RELEASE</spring-framework.version>
 	</properties>
 
 	<dependencies>
