@@ -13,7 +13,7 @@ public class JpaConfig {
 //    public LocalContainerEntityManagerFactoryBean createEMF(JpaVendorAdapter adapter) {
 //        LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
 //        Map<String, String> properties = new HashMap<>();
-//        properties.put("javax.persistence.jdbc.url", "jdbc:mysql://localhost:3306/library");
+//        properties.put("javax.persistence.jdbc.url", "jdbc:mysql://localhost:3306/library?useSSL=false&serverTimezone=UTC");
 //        properties.put("javax.persistence.jdbc.user", "root");
 //        properties.put("javax.persistence.jdbc.password", "admin");
 //        properties.put("javax.persistence.jdbc.driver", "com.mysql.jdbc.Driver");
@@ -45,7 +45,7 @@ public class JpaConfig {
     @Bean
     public DataSource createDS() {
         BasicDataSource ds = new BasicDataSource();
-        ds.setUrl("jdbc:mysql://localhost:3306/library");
+        ds.setUrl("jdbc:mysql://localhost:3306/library?useSSL=false&serverTimezone=UTC");
         ds.setUsername("root");
         ds.setPassword("admin");
         ds.setDriverClassName("com.mysql.jdbc.Driver");

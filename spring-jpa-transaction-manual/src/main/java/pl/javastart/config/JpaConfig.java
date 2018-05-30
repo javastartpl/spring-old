@@ -54,7 +54,7 @@ public class JpaConfig {
     @Bean
     public DataSource createDS() {
         BasicDataSource ds = new BasicDataSource();
-        ds.setUrl("jdbc:mysql://localhost:3306/library");
+        ds.setUrl("jdbc:mysql://localhost:3306/library?useSSL=false&serverTimezone=UTC");
         ds.setUsername("root");
         ds.setPassword("admin");
         ds.setDriverClassName("com.mysql.jdbc.Driver");
