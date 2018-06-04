@@ -4,11 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>pl.javastart</groupId>
-	<artifactId>spring-data-custom-queries</artifactId>
+	<artifactId>spring-data-boot2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-data-custom-queries</name>
+	<name>spring-data-boot2</name>
+	<description>Spring data application</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -44,5 +45,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>

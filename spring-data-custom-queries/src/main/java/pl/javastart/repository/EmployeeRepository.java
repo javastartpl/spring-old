@@ -14,7 +14,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long>{
     //NO NO NO
 //    List<Employee> findByLastNameAndSalaryGreaterThanEqualOrderBySalaryAsc(String lastName, double salary);
     
-    //Nice 1
+    //OK 1
 //    @Query("SELECT e FROM Employee e WHERE e.lastName=:lastName AND e.salary>=:salary")
 //    List<Employee> findByLastNameAndSalary(@Param("lastName") String lastName, 
 //                                           @Param("salary") double salary);
@@ -22,7 +22,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long>{
     @Query(name = "Employee.findByLastNameAndSalary")
     List<Employee> findByLastNameAndSalary(@Param("lastName") String lastName, 
                                          @Param("salary") double salary);
-    
     
     @Query("SELECT e.lastName FROM Employee e WHERE e.salary>=:salary ORDER BY e.lastName ASC")
     List<String> namesForSalaryAsc(@Param("salary") double salary);
