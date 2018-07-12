@@ -1,6 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>pl.javastart</groupId>
@@ -10,11 +10,12 @@ http://maven.apache.org/maven-v4_0_0.xsd">
 	<name>spring-mvc-rest-jaxb</name>
 
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>10</maven.compiler.source>
+		<maven.compiler.target>10</maven.compiler.target>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
-		<spring.version>4.3.0.RELEASE</spring.version>
+		<spring.version>5.0.6.RELEASE</spring.version>
 		<servlet.version>3.1.0</servlet.version>
+		<jaxb.version>2.3.0.1</jaxb.version>
 	</properties>
 
 	<dependencies>
@@ -28,6 +29,11 @@ http://maven.apache.org/maven-v4_0_0.xsd">
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${servlet.version}</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
+			<version>${jaxb.version}</version>
 		</dependency>
 	</dependencies>
 </project>
