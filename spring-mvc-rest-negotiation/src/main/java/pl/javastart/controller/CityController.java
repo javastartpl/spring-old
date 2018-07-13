@@ -14,9 +14,9 @@ public class CityController {
 //        return new City("Warszawa", 1_700_000);
 //    }
     
-      @RequestMapping(path = "/city", 
-              produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-      public City getCity() {
-          return new City("Warszawa", 1_700_000);
-      }
+	@RequestMapping(path = "/city", 
+			produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+	public City getCity() {
+		return new City("Warszawa", 1_700_000);
+	}
 }
