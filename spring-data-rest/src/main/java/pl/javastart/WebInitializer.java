@@ -1,9 +1,10 @@
 package pl.javastart;
 
+import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import pl.javastart.config.DbConfig;
-import pl.javastart.config.rest.WebDataRestConfig;
+import pl.javastart.config.rest.CustomDataRestConfig;
 
 public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
@@ -14,7 +15,7 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{WebDataRestConfig.class};
+        return new Class[]{RepositoryRestMvcConfiguration.class, CustomDataRestConfig.class};
     }
 
     @Override
