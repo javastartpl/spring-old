@@ -7,12 +7,12 @@
 <body>
     <p th:text="${message}">asdf</p>
     <h1>Add city:</h1>
-    <form th:action="@{/city}" th:object="${cityModel}" method="post">
+    <form th:action="@{/cities}" th:object="${cityModel}" method="post">
         <p><input type="text" th:field="*{name}" placeholder="city name" /></p>
         <p><input type="number" th:field="*{population}" placeholder="population" /></p>
         <p><input type="submit" value="Add City" /></p>
     </form>
     
-    <a th:href="@{/city}">List all cities</a>
+    <a th:href="@{/cities}">List all cities</a>
 </body>
 </html>
