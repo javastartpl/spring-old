@@ -8,10 +8,10 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<spring.version>4.3.0.RELEASE</spring.version>
-		<bean.validation.version>1.1.0.Final</bean.validation.version>
+		<maven.compiler.source>10</maven.compiler.source>
+		<maven.compiler.target>10</maven.compiler.target>
+		<spring.version>5.0.6.RELEASE</spring.version>
+		<bean.validation.version>2.0.1.Final</bean.validation.version>
 	</properties>
 
 	<dependencies>
