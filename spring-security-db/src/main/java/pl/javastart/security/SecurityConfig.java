@@ -26,7 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         userDetailsService.setCreateUserSql("insert into accounts (username, password, enabled) values (?,?,?)");
         userDetailsService.setCreateAuthoritySql("insert into roles (username, authority) values (?,?)");
         //      builder.withDefaultSchema() //tylko dla bazy HSQLDB
-        builder.withUser("admin").password("AdMin!@3").roles("USER");
+        builder.withUser("admin").password("{noop}AdMin!@3").roles("USER");
     }
 
     @Override

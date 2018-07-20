@@ -1,8 +1,8 @@
 INSERT INTO accounts(username,password,enabled)
-VALUES ('jan','jan123', true);
+VALUES ('jan','{noop}jan123', true);
 
 INSERT INTO accounts(username,password,enabled)
-VALUES ('ania','Asdf1234', true);
+VALUES ('ania','{noop}Asdf1234', true);
 
 INSERT INTO roles (username, authority)
 VALUES ('jan', 'ROLE_USER');
