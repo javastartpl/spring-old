@@ -15,7 +15,7 @@
             </tr>
             <tr th:each="singleTime: ${allTimes}" th:object="${singleTime}">
                 <td th:text="*{firstName}">John</td>
-                <td th:tetx="*{lastName}">Kowalski</td>
+                <td th:text="*{lastName}">Kowalski</td>
                 <td th:text="|*{hours}:*{minutes}:*{seconds}|">1:40:23</td>
             </tr>
         </table>
