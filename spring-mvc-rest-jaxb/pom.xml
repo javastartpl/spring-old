@@ -13,7 +13,7 @@ http://maven.apache.org/maven-v4_0_0.xsd">
 		<maven.compiler.source>10</maven.compiler.source>
 		<maven.compiler.target>10</maven.compiler.target>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
-		<spring.version>5.0.6.RELEASE</spring.version>
+		<spring.version>5.1.0.RELEASE</spring.version>
 		<servlet.version>3.1.0</servlet.version>
 		<jaxb.version>2.3.0.1</jaxb.version>
 	</properties>
