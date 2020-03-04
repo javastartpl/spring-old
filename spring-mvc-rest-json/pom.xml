@@ -15,7 +15,7 @@ http://maven.apache.org/maven-v4_0_0.xsd">
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<spring.version>5.0.6.RELEASE</spring.version>
 		<servlet.version>3.1.0</servlet.version>
-		<jackson.version>2.9.6</jackson.version>
+		<jackson.version>2.9.10.3</jackson.version>
 	</properties>
 
 	<dependencies>
