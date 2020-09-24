@@ -1,6 +1,7 @@
 package pl.javastart.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.*;
@@ -21,7 +22,7 @@ public class Client implements Serializable {
     @Column(nullable = false)
     private String address;
     @OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
-    private List<Order> orders;
+    private List<Order> orders = new ArrayList<>();
     
     Client() {}
     

@@ -1,6 +1,7 @@
 package pl.javastart.model;
  
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -27,7 +28,7 @@ public class Product implements Serializable {
     @Column(name = "details")
     private String details;
     @ManyToMany(mappedBy = "products")
-    private List<Order> orders;
+    private List<Order> orders = new ArrayList<>();
     
     Product() {}
 
