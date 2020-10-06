@@ -36,8 +36,9 @@ public class ProductController {
 
     @GetMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Product> getProductById(@PathVariable Long id) {
-        Product product = productRepository.findOne(id);
-        return ResponseEntity.ok(product);
+        return productRepository.findById(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)

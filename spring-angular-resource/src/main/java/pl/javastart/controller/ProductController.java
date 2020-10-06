@@ -27,7 +27,7 @@ public class ProductController {
     public ProductController(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
-    
+
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Product>> allProducts() {
         List<Product> allProducts = productRepository.findAll();
@@ -36,17 +36,18 @@ public class ProductController {
 
     @GetMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Product> getProductById(@PathVariable Long id) {
-        Product product = productRepository.findOne(id);
-        return ResponseEntity.ok(product);
+        return productRepository.findById(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> saveProduct(@RequestBody Product product) {
         Product save = productRepository.save(product);
         URI location = ServletUriComponentsBuilder
-                        .fromCurrentRequest()
-                        .path("/{id}")
-                        .buildAndExpand(save.getId())
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(save.getId())
                 .toUri();
         return ResponseEntity.created(location).body(save);
     }
