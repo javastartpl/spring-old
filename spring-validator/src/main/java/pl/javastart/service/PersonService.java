@@ -28,6 +28,8 @@ public class PersonService {
     @Autowired
     public PersonService(Validator validator) {
         this.validator = validator;
+        if (!validator.supports(Person.class))
+            throw new IllegalArgumentException("Person.class not supported by PersonValidator");
         this.people = new HashSet<>();
     }
     
