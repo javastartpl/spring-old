@@ -33,12 +33,9 @@ public class BookEndpoint {
     
     @GetMapping("/api/books/{id}")
     public ResponseEntity<Book> getById(@PathVariable Long id) {
-        Book book = bookRepository.findOne(id);
-        if(book != null) {
-            return ResponseEntity.ok(book);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+        return bookRepository.findById(id)
+                .map(book -> ResponseEntity.ok(book))
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
     
     @PostMapping("/api/books")
