@@ -4,12 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>pl.javastart</groupId>
-	<artifactId>spring-boot-di</artifactId>
+	<artifactId>spring-di-qualifiers</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
-	<name>spring-di-qualifiers</name>
-	<description>spring-di-qualifiers</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

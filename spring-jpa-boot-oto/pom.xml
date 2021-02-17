@@ -9,7 +9,6 @@
 	<artifactId>spring-jpa-boot-oto</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>spring-jpa-boot-oto</name>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

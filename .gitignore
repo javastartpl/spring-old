@@ -7,3 +7,5 @@
 **/.tern-project
 **/bin/
 Servers/
+*.iml
+**/.idea

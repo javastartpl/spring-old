@@ -4,12 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>pl.javastart</groupId>
-	<artifactId>deploy-war</artifactId>
+	<artifactId>spring-deploy-war</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-
-	<name>spring-deploy-war</name>
-	<description>simple war app</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

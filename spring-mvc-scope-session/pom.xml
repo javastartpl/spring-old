@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>pl.javastart</groupId>
-	<artifactId>spring-mvc-scopes</artifactId>
+	<artifactId>spring-mvc-scope-session</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>spring-mvc-scopes</name>
+	<name>spring-mvc-scope-session</name>
 	<description>Spring Application</description>
 
 	<parent>

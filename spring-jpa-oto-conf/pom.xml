@@ -3,7 +3,7 @@
     http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>pl.javastart</groupId>
-	<artifactId>spring-jpa</artifactId>
+	<artifactId>spring-jpa-oto-conf</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
