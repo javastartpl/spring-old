@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringSecurityBootApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringSecurityBootApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringSecurityBootApplication.class, args);
+    }
 }
