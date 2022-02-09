@@ -19,7 +19,7 @@ http://maven.apache.org/maven-v4_0_0.xsd">
 		<spring.data.version>2.0.6.RELEASE</spring.data.version>
 		<spring.data-rest.version>3.0.6.RELEASE</spring.data-rest.version>
 		<!-- hibernate and database -->
-		<hibernate.version>5.3.2.Final</hibernate.version>
+		<hibernate.version>5.4.24.Final</hibernate.version>
 		<mysql.connector.version>5.1.39</mysql.connector.version>
 		<dbcp.version>2.4.0</dbcp.version>
 	</properties>
