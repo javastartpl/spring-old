@@ -11,7 +11,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
-		<spring.version>5.0.6.RELEASE</spring.version>
+		<spring.version>5.2.20.RELEASE</spring.version>
 		<servlet.version>3.1.0</servlet.version>
 	</properties>
 
